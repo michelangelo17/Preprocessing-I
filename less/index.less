@@ -184,21 +184,38 @@ a {
 // styles start
 
 body {
+	//body styles
 	width: 90%;
 	margin: auto;
 	background-color: @popBackground;
+
+	//body html tag selectors
+	nav {
+		.flexCenter();
+		margin-bottom: @normal;
+		max-width: 100%;
+		background-color: @popBackground;
+		a {
+			margin: @small;
+			.a();
+		}
+	}
+	h1 {
+		.h1();
+		margin-bottom: @small;
+	}
+	h2 {
+		.h2();
+	}
+	p {
+		.p();
+	}
+
+	// class and id selectors
+
+	// header styles
 	.about {
 		background-color: @background;
-		nav {
-			.flexCenter();
-			margin-bottom: @normal;
-			max-width: 100%;
-			background-color: @popBackground;
-			a {
-				margin: @small;
-				.a();
-			}
-		}
 		.headerContent {
 			height: 80%;
 			.flexColumnCenter();
@@ -212,20 +229,13 @@ body {
 				margin-bottom: @small;
 			}
 		}
-		h1 {
-			.h1();
-			margin-bottom: @small;
-		}
-		h2 {
-			.h2();
-		}
-		p {
-			.p();
-		}
 	}
 
+	// main styles
 	main {
 		background-color: @background;
+
+		//main html tag selectors
 		h2 {
 			.h2();
 		}
@@ -235,6 +245,20 @@ body {
 		p {
 			.p();
 		}
+		ul {
+			font-size: @li;
+			color: @mainColor;
+			font-family: @smallFont;
+			text-align: center;
+			@media (min-width: 2000px) {
+				font-size: @li + 1vw;
+			}
+		}
+		i {
+			color: @popColor;
+		}
+
+		//class and id selectors
 		#skills {
 			.skillsBorder {
 				.sectionBorder();
@@ -244,17 +268,9 @@ body {
 			}
 			.skillsColumn {
 				width: 49%;
-				ul {
-					font-size: @li;
-					color: @mainColor;
-					font-family: @smallFont;
-					text-align: center;
-					@media (min-width: 2000px) {
-						font-size: @li + 1vw;
-					}
-				}
 			}
 		}
+
 		#workHistory {
 			.workBorder {
 				.sectionBorder();
@@ -270,12 +286,10 @@ body {
 				border: none;
 			}
 		}
+
 		#contact {
 			.contactBorder {
 				.sectionBorder();
-			}
-			i {
-				color: @popColor;
 			}
 			.github {
 				.flexCenter();
@@ -289,7 +303,8 @@ body {
 			}
 		}
 	}
-
+	
+	// footer styles
 	footer {
 		margin: @normal 0;
 		text-align: center;
