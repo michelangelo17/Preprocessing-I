@@ -137,42 +137,43 @@ body {
 a {
   text-decoration: none;
 }
-.flexCenter {
+body {
+  width: 90%;
+  margin: auto;
+  background-color: #41545B;
+}
+body nav {
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
+  max-width: 100%;
+  background-color: #41545B;
 }
-.flexColumnCenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.flexBetween {
-  display: flex;
-  justify-content: space-between;
-}
-.a {
+body nav a {
+  margin: 3%;
   text-decoration: none;
   font-size: 2rem;
   color: white;
   font-family: 'Arvo', serif;
 }
 @media (min-width: 2000px) {
-  .a {
+  body nav a {
     font-size: 3rem;
   }
 }
-.h1 {
+body h1 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
+  margin-bottom: 3%;
 }
 @media (min-width: 2000px) {
-  .h1 {
+  body h1 {
     font-size: 4.5rem;
   }
 }
-.h2 {
+body h2 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
@@ -180,29 +181,17 @@ a {
   padding: 0 0 10%;
 }
 @media (min-width: 768px) {
-  .h2 {
+  body h2 {
     padding-bottom: 5%;
   }
 }
 @media (min-width: 2000px) {
-  .h2 {
+  body h2 {
     font-size: 4.5rem;
     padding-bottom: 5%;
   }
 }
-.h3 {
-  font-size: 3rem;
-  color: lightgrey;
-  text-align: center;
-  font-family: 'Arvo', serif;
-  padding-bottom: 3%;
-}
-@media (min-width: 2000px) {
-  .h3 {
-    font-size: 4rem;
-  }
-}
-.p {
+body p {
   font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
@@ -211,40 +200,12 @@ a {
   text-align: center;
 }
 @media (min-width: 2000px) {
-  .p {
+  body p {
     font-size: 3.5rem;
   }
 }
-.sectionBorder {
-  padding: 5% 0;
-  border-top: 10px solid #41545B;
-}
-body {
-  width: 90%;
-  margin: auto;
-  background-color: #41545B;
-}
 body .about {
   background-color: #181A1B;
-}
-body .about nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
-  max-width: 100%;
-  background-color: #41545B;
-}
-body .about nav a {
-  margin: 3%;
-  text-decoration: none;
-  font-size: 2rem;
-  color: white;
-  font-family: 'Arvo', serif;
-}
-@media (min-width: 2000px) {
-  body .about nav a {
-    font-size: 3rem;
-  }
 }
 body .about .headerContent {
   height: 80%;
@@ -261,49 +222,6 @@ body .about .headerImg img {
   max-width: 200px;
   border-radius: 5%;
   margin-bottom: 3%;
-}
-body .about h1 {
-  font-size: 3.5rem;
-  color: white;
-  text-align: center;
-  font-family: 'Arvo', serif;
-  margin-bottom: 3%;
-}
-@media (min-width: 2000px) {
-  body .about h1 {
-    font-size: 4.5rem;
-  }
-}
-body .about h2 {
-  font-size: 3.5rem;
-  color: white;
-  text-align: center;
-  font-family: 'Arvo', serif;
-  padding: 0 0 10%;
-}
-@media (min-width: 768px) {
-  body .about h2 {
-    padding-bottom: 5%;
-  }
-}
-@media (min-width: 2000px) {
-  body .about h2 {
-    font-size: 4.5rem;
-    padding-bottom: 5%;
-  }
-}
-body .about p {
-  font-size: 2.5rem;
-  color: lightgrey;
-  font-family: 'Playfair Display', serif;
-  padding: 0 3%;
-  padding-bottom: 5%;
-  text-align: center;
-}
-@media (min-width: 2000px) {
-  body .about p {
-    font-size: 3.5rem;
-  }
 }
 body main {
   background-color: #181A1B;
@@ -351,6 +269,20 @@ body main p {
     font-size: 3.5rem;
   }
 }
+body main ul {
+  font-size: 2.5rem;
+  color: lightgrey;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+@media (min-width: 2000px) {
+  body main ul {
+    font-size: 3.5rem;
+  }
+}
+body main i {
+  color: white;
+}
 body main #skills .skillsBorder {
   padding: 5% 0;
   border-top: 10px solid #41545B;
@@ -361,17 +293,6 @@ body main #skills .skillsContainer {
 }
 body main #skills .skillsColumn {
   width: 49%;
-}
-body main #skills .skillsColumn ul {
-  font-size: 2.5rem;
-  color: lightgrey;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: center;
-}
-@media (min-width: 2000px) {
-  body main #skills .skillsColumn ul {
-    font-size: 3.5rem;
-  }
 }
 body main #workHistory .workBorder {
   padding: 5% 0;
@@ -390,9 +311,6 @@ body main #workHistory .lastJob {
 body main #contact .contactBorder {
   padding: 5% 0;
   border-top: 10px solid #41545B;
-}
-body main #contact i {
-  color: white;
 }
 body main #contact .github {
   display: flex;

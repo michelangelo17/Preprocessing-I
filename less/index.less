@@ -98,23 +98,24 @@ a {
 
 // mixins
 
-.flexCenter {
+// flex row centered
+.flexCenter() {
 	display: flex;
 	justify-content: center;
 }
-
-.flexColumnCenter {
+// flex column centered
+.flexColumnCenter() {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-
-.flexBetween {
+// flex row space between
+.flexBetween() {
 	display: flex;
 	justify-content: space-between;
 }
-
-.a {
+// default a tag styles
+.a() {
 	text-decoration: none;
 	font-size: @a;
 	color: @popColor;
@@ -123,8 +124,8 @@ a {
 		font-size: @a + 1vw;
 	}
 }
-
-.h1 {
+// default h1 tag styles
+.h1() {
 	font-size: @h1;
 	color: @popColor;
 	text-align: center;
@@ -133,8 +134,8 @@ a {
 		font-size: @h1 + 1vw;
 	}
 }
-
-.h2 {
+// default h2 tag styles
+.h2() {
 	font-size: @h2;
 	color: @popColor;
 	text-align: center;
@@ -148,8 +149,8 @@ a {
 		padding-bottom: @normal;
 	}
 }
-
-.h3 {
+// default h3 tag styles
+.h3() {
 	font-size: @h3;
 	color: @mainColor;
 	text-align: center;
@@ -159,8 +160,8 @@ a {
 		font-size: @h3 + 1vw;
 	}
 }
-
-.p {
+// default p tag styles
+.p() {
 	font-size: @p;
 	color: @mainColor;
 	font-family: @mainFont;
@@ -171,8 +172,8 @@ a {
 		font-size: @p + 1vw;
 	}
 }
-
-.sectionBorder {
+// section border mixin
+.sectionBorder() {
 	padding: @normal 0;
 	border-top: 10px solid @popBackground; 
 }
@@ -184,21 +185,38 @@ a {
 // styles start
 
 body {
+	//body styles
 	width: 90%;
 	margin: auto;
 	background-color: @popBackground;
+
+	//body html tag selectors
+	nav {
+		.flexCenter();
+		margin-bottom: @normal;
+		max-width: 100%;
+		background-color: @popBackground;
+		a {
+			margin: @small;
+			.a();
+		}
+	}
+	h1 {
+		.h1();
+		margin-bottom: @small;
+	}
+	h2 {
+		.h2();
+	}
+	p {
+		.p();
+	}
+
+	// class and id selectors
+
+	// header styles
 	.about {
 		background-color: @background;
-		nav {
-			.flexCenter();
-			margin-bottom: @normal;
-			max-width: 100%;
-			background-color: @popBackground;
-			a {
-				margin: @small;
-				.a();
-			}
-		}
 		.headerContent {
 			height: 80%;
 			.flexColumnCenter();
@@ -212,20 +230,13 @@ body {
 				margin-bottom: @small;
 			}
 		}
-		h1 {
-			.h1();
-			margin-bottom: @small;
-		}
-		h2 {
-			.h2();
-		}
-		p {
-			.p();
-		}
 	}
 
+	// main styles
 	main {
 		background-color: @background;
+
+		//main html tag selectors
 		h2 {
 			.h2();
 		}
@@ -235,6 +246,20 @@ body {
 		p {
 			.p();
 		}
+		ul {
+			font-size: @li;
+			color: @mainColor;
+			font-family: @smallFont;
+			text-align: center;
+			@media (min-width: 2000px) {
+				font-size: @li + 1vw;
+			}
+		}
+		i {
+			color: @popColor;
+		}
+
+		//class and id selectors
 		#skills {
 			.skillsBorder {
 				.sectionBorder();
@@ -244,17 +269,9 @@ body {
 			}
 			.skillsColumn {
 				width: 49%;
-				ul {
-					font-size: @li;
-					color: @mainColor;
-					font-family: @smallFont;
-					text-align: center;
-					@media (min-width: 2000px) {
-						font-size: @li + 1vw;
-					}
-				}
 			}
 		}
+
 		#workHistory {
 			.workBorder {
 				.sectionBorder();
@@ -270,12 +287,10 @@ body {
 				border: none;
 			}
 		}
+
 		#contact {
 			.contactBorder {
 				.sectionBorder();
-			}
-			i {
-				color: @popColor;
 			}
 			.github {
 				.flexCenter();
@@ -289,7 +304,8 @@ body {
 			}
 		}
 	}
-
+	
+	// footer styles
 	footer {
 		margin: @normal 0;
 		text-align: center;
