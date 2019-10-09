@@ -150,15 +150,16 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.flexAround {
-  display: flex;
-  justify-content: space-around;
-}
 .a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: white;
   font-family: 'Arvo', serif;
+}
+@media (min-width: 2000px) {
+  .a {
+    font-size: 3rem;
+  }
 }
 .h1 {
   font-size: 3.5rem;
@@ -166,19 +167,40 @@ a {
   text-align: center;
   font-family: 'Arvo', serif;
 }
+@media (min-width: 2000px) {
+  .h1 {
+    font-size: 4.5rem;
+  }
+}
 .h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   padding: 0 0 10%;
 }
+@media (min-width: 768px) {
+  .h2 {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 2000px) {
+  .h2 {
+    font-size: 4.5rem;
+    padding-bottom: 5%;
+  }
+}
 .h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: lightgrey;
   text-align: center;
   font-family: 'Arvo', serif;
   padding-bottom: 3%;
+}
+@media (min-width: 2000px) {
+  .h3 {
+    font-size: 4rem;
+  }
 }
 .p {
   font-size: 2.5rem;
@@ -187,6 +209,11 @@ a {
   padding: 0 3%;
   padding-bottom: 5%;
   text-align: center;
+}
+@media (min-width: 2000px) {
+  .p {
+    font-size: 3.5rem;
+  }
 }
 .sectionBorder {
   padding: 5% 0;
@@ -197,76 +224,75 @@ body {
   margin: auto;
   background-color: #41545B;
 }
-body i {
-  color: white;
-}
-.about {
+body .about {
   background-color: #181A1B;
-  height: 100vh;
 }
-@media (pointer: fine) {
-  .about {
-    height: auto;
-  }
-}
-@media (min-width: 1024px) {
-  .about {
-    height: auto;
-  }
-  .about a {
-    font-size: 2.2rem;
-  }
-}
-.about nav {
+body .about nav {
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
   max-width: 100%;
   background-color: #41545B;
 }
-.about nav a {
+body .about nav a {
   margin: 3%;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: white;
   font-family: 'Arvo', serif;
 }
-@media (min-width: 1024px) {
-  .about nav a {
-    font-size: 2.2rem;
+@media (min-width: 2000px) {
+  body .about nav a {
+    font-size: 3rem;
   }
 }
-.about .headerContent {
+body .about .headerContent {
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.about .headerImg {
+body .about .headerImg {
   display: flex;
   justify-content: center;
 }
-.about .headerImg img {
+body .about .headerImg img {
   width: 40%;
   max-width: 200px;
   border-radius: 5%;
   margin-bottom: 3%;
 }
-.about h1 {
+body .about h1 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   margin-bottom: 3%;
 }
-.about h2 {
-  font-size: 2.5rem;
+@media (min-width: 2000px) {
+  body .about h1 {
+    font-size: 4.5rem;
+  }
+}
+body .about h2 {
+  font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   padding: 0 0 10%;
 }
-.about p {
+@media (min-width: 768px) {
+  body .about h2 {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 2000px) {
+  body .about h2 {
+    font-size: 4.5rem;
+    padding-bottom: 5%;
+  }
+}
+body .about p {
   font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
@@ -274,39 +300,45 @@ body i {
   padding-bottom: 5%;
   text-align: center;
 }
-.about .down {
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-@media (min-width: 1024px) {
-  .about .down {
-    display: none;
+@media (min-width: 2000px) {
+  body .about p {
+    font-size: 3.5rem;
   }
 }
-@media (pointer: fine) {
-  .about .down {
-    display: none;
-  }
-}
-main {
+body main {
   background-color: #181A1B;
 }
-main h2 {
-  font-size: 2.5rem;
+body main h2 {
+  font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   padding: 0 0 10%;
 }
-main h3 {
-  font-size: 2rem;
+@media (min-width: 768px) {
+  body main h2 {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 2000px) {
+  body main h2 {
+    font-size: 4.5rem;
+    padding-bottom: 5%;
+  }
+}
+body main h3 {
+  font-size: 3rem;
   color: lightgrey;
   text-align: center;
   font-family: 'Arvo', serif;
   padding-bottom: 3%;
 }
-main p {
+@media (min-width: 2000px) {
+  body main h3 {
+    font-size: 4rem;
+  }
+}
+body main p {
   font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
@@ -314,56 +346,69 @@ main p {
   padding-bottom: 5%;
   text-align: center;
 }
-main #skills .skillsBorder {
+@media (min-width: 2000px) {
+  body main p {
+    font-size: 3.5rem;
+  }
+}
+body main #skills .skillsBorder {
   padding: 5% 0;
   border-top: 10px solid #41545B;
 }
-main #skills .skillsContainer {
+body main #skills .skillsContainer {
   display: flex;
   justify-content: space-between;
 }
-main #skills .skillsColumn {
+body main #skills .skillsColumn {
   width: 49%;
 }
-main #skills .skillsColumn ul {
+body main #skills .skillsColumn ul {
   font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Cormorant Garamond', serif;
   text-align: center;
 }
-main #workHistory .workBorder {
+@media (min-width: 2000px) {
+  body main #skills .skillsColumn ul {
+    font-size: 3.5rem;
+  }
+}
+body main #workHistory .workBorder {
   padding: 5% 0;
   border-top: 10px solid #41545B;
 }
-main #workHistory p {
+body main #workHistory p {
   font-family: 'Cormorant Garamond', serif;
 }
-main #workHistory .job {
+body main #workHistory .job {
   padding: 5% 0;
   border-bottom: 1px dashed lightgrey;
 }
-main #workHistory .lastJob {
+body main #workHistory .lastJob {
   border: none;
 }
-main #contact .contactBorder {
+body main #contact .contactBorder {
   padding: 5% 0;
   border-top: 10px solid #41545B;
 }
-main #contact .github {
+body main #contact i {
+  color: white;
+}
+body main #contact .github {
   display: flex;
   justify-content: center;
   padding-bottom: 5%;
 }
-main #contact .contactLinks {
+body main #contact .contactLinks {
   display: flex;
   justify-content: center;
 }
-main #contact .contactLinks a {
+body main #contact .contactLinks a {
   margin: 0 5% 10%;
 }
-footer {
+body footer {
   margin: 5% 0;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: white;
 }

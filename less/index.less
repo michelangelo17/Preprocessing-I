@@ -70,12 +70,12 @@ a {
 
 // font size
 @h1: 3.5rem;
-@h2: @h1 - 1rem;
-@h3: @h1 - 1.5rem;
-@a: @h1 - 2rem + .5vmin;
+@h2: @h1 - 1rem + 1vmin;
+@h3: @h1 - 1.5rem + 1vmin;
 @p: @h1 - 2rem + 1vmin;
+@a: @h1 - 2.5 + 1vmin;
 @li: @h1 - 2rem + 1vmin;
-@copy: @p - .5rem + 1vmin;
+@copy: @p - 1rem;
 
 
 // font family
@@ -91,6 +91,10 @@ a {
 // background
 @background: #181A1B;
 @popBackground: #41545B;
+
+// end variables
+
+
 
 // mixins
 
@@ -110,16 +114,14 @@ a {
 	justify-content: space-between;
 }
 
-.flexAround {
-	display: flex;
-	justify-content: space-around;
-}
-
 .a {
 	text-decoration: none;
 	font-size: @a;
 	color: @popColor;
 	font-family: @popFont;
+	@media (min-width: 2000px) {
+		font-size: @a + 1vw;
+	}
 }
 
 .h1 {
@@ -127,6 +129,9 @@ a {
 	color: @popColor;
 	text-align: center;
 	font-family: @popFont;
+	@media (min-width: 2000px) {
+		font-size: @h1 + 1vw;
+	}
 }
 
 .h2 {
@@ -135,6 +140,13 @@ a {
 	text-align: center;
 	font-family: @popFont;
 	padding: 0 0 @extra;
+	@media (min-width: 768px) {
+		padding-bottom: @normal;
+	}
+	@media (min-width: 2000px) {
+		font-size: @h2 + 1vw;
+		padding-bottom: @normal;
+	}
 }
 
 .h3 {
@@ -143,6 +155,9 @@ a {
 	text-align: center;
 	font-family: @popFont;
 	padding-bottom: @small;
+	@media (min-width: 2000px) {
+		font-size: @h3 + 1vw;
+	}
 }
 
 .p {
@@ -152,6 +167,9 @@ a {
 	padding: 0 @small;
 	padding-bottom: @normal;
 	text-align: center;
+	@media (min-width: 2000px) {
+		font-size: @p + 1vw;
+	}
 }
 
 .sectionBorder {
@@ -161,137 +179,121 @@ a {
 
 // end mixins
 
+
+
 // styles start
 
 body {
 	width: 90%;
 	margin: auto;
 	background-color: @popBackground;
-	i {
-		color: @popColor;
-	}
-}
-
-.about {
-	background-color: @background;
-	height: 100vh;
-	@media (pointer: fine) {
-		height: auto;
-	}
-  @media (min-width: 700px) {
-		height: auto;
-		a {
-			font-size: @a + 1vmin;
+	.about {
+		background-color: @background;
+		nav {
+			.flexCenter();
+			margin-bottom: @normal;
+			max-width: 100%;
+			background-color: @popBackground;
+			a {
+				margin: @small;
+				.a();
+			}
 		}
-  }
-	nav {
-		.flexCenter();
-		margin-bottom: @normal;
-		max-width: 100%;
-		background-color: @popBackground;
-		a {
-			margin: @small;
-			.a();
+		.headerContent {
+			height: 80%;
+			.flexColumnCenter();
+			}
+		.headerImg {
+			.flexCenter();
+				img {
+				width: 40%;
+				max-width: 200px;
+				border-radius: 5%;
+				margin-bottom: @small;
+			}
 		}
-	}
-	.headerContent {
-		height: 80%;
-		.flexColumnCenter();
-		}
-	.headerImg {
-		.flexCenter();
-			img {
-			width: 40%;
-			max-width: 200px;
-			border-radius: 5%;
+		h1 {
+			.h1();
 			margin-bottom: @small;
 		}
-	}
-	h1 {
-		.h1();
-		margin-bottom: @small;
-	}
-	h2 {
-		.h2();
-	}
-	p {
-		.p();
-	}
-	.down {
-		.flexCenter();
-		color: @popColor;
-		@media (min-width: 1024px) {
-			display: none;
-		}
-		@media (pointer: fine) {
-			display: none;
-		}
-	}
-}
-
-main {
-	background-color: @background;
-	h2 {
-		.h2();
-	}
-	h3 {
-		.h3();
-	}
-	p {
-		.p();
-	}
-	#skills {
-		.skillsBorder {
-			.sectionBorder();
-		}
-		.skillsContainer {
-			.flexBetween();
-		}
-		.skillsColumn {
-			width: 49%;
-			ul {
-				font-size: @li;
-				color: @mainColor;
-				font-family: @smallFont;
-				text-align: center;
-			}
-		}
-	}
-	#workHistory {
-		.workBorder {
-			.sectionBorder();
+		h2 {
+			.h2();
 		}
 		p {
-			font-family: @smallFont;
-		}
-		.job {
-			padding: @normal 0;
-			border-bottom: 1px dashed @mainColor; 
-		}
-		.lastJob {
-			border: none;
+			.p();
 		}
 	}
-	#contact {
-		.contactBorder {
-			.sectionBorder();
+
+	main {
+		background-color: @background;
+		h2 {
+			.h2();
 		}
-		.github {
-			.flexCenter();
-			padding-bottom: @normal;
+		h3 {
+			.h3();
 		}
-		.contactLinks {
-			.flexCenter();
-			a {
-				margin: 0 @normal @extra;
+		p {
+			.p();
+		}
+		#skills {
+			.skillsBorder {
+				.sectionBorder();
+			}
+			.skillsContainer {
+				.flexBetween();
+			}
+			.skillsColumn {
+				width: 49%;
+				ul {
+					font-size: @li;
+					color: @mainColor;
+					font-family: @smallFont;
+					text-align: center;
+					@media (min-width: 2000px) {
+						font-size: @li + 1vw;
+					}
+				}
+			}
+		}
+		#workHistory {
+			.workBorder {
+				.sectionBorder();
+			}
+			p {
+				font-family: @smallFont;
+			}
+			.job {
+				padding: @normal 0;
+				border-bottom: 1px dashed @mainColor; 
+			}
+			.lastJob {
+				border: none;
+			}
+		}
+		#contact {
+			.contactBorder {
+				.sectionBorder();
+			}
+			i {
+				color: @popColor;
+			}
+			.github {
+				.flexCenter();
+				padding-bottom: @normal;
+			}
+			.contactLinks {
+				.flexCenter();
+				a {
+					margin: 0 @normal @extra;
+				}
 			}
 		}
 	}
-}
 
-footer {
-	margin: @normal 0;
-	text-align: center;
-	font-size: @copy;
-	color: @popColor;
+	footer {
+		margin: @normal 0;
+		text-align: center;
+		font-size: @copy;
+		color: @popColor;
+	}
 }
