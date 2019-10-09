@@ -72,7 +72,7 @@ a {
 @h1: 3.5rem;
 @h2: @h1 - 1rem;
 @h3: @h1 - 1.5rem;
-@a: @h1 - 2.3rem;
+@a: @h1 - 2rem + .5vmin;
 @p: @h1 - 2rem + 1vmin;
 @li: @h1 - 2rem + 1vmin;
 @copy: @p - .5rem + 1vmin;
@@ -178,7 +178,7 @@ body {
 	@media (pointer: fine) {
 		height: auto;
 	}
-  @media (min-width: 1024px) {
+  @media (min-width: 700px) {
 		height: auto;
 		a {
 			font-size: @a + 1vmin;
@@ -192,9 +192,6 @@ body {
 		a {
 			margin: @small;
 			.a();
-			@media (min-width: 1024px) {
-				font-size: @a + 1vmin;
-			}
 		}
 	}
 	.headerContent {
