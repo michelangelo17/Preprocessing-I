@@ -69,13 +69,14 @@ a {
 @small: 3%;
 
 // font size
-@h1: 4rem;
+@h1: 3.5rem;
 @h2: @h1 - 1rem;
-@h3: @h2 - 1rem;
-@a: @h2 - .75rem;
-@p: @h3 - .5rem;
-@li: @h2 - 1rem;
-@copy: @p - 1rem;
+@h3: @h1 - 1.5rem;
+@a: @h1 - 2.3rem;
+@p: @h1 - 2rem + 1vmin;
+@li: @h1 - 2rem + 1vmin;
+@copy: @p - .5rem + 1vmin;
+
 
 // font family
 @mainFont: 'Playfair Display', serif;
@@ -158,6 +159,10 @@ a {
 	border-top: 10px solid @popBackground; 
 }
 
+// end mixins
+
+// styles start
+
 body {
 	width: 90%;
 	margin: auto;
@@ -170,6 +175,15 @@ body {
 .about {
 	background-color: @background;
 	height: 100vh;
+	@media (pointer: fine) {
+		height: auto;
+	}
+  @media (min-width: 1024px) {
+		height: auto;
+		a {
+			font-size: @a + 1vmin;
+		}
+  }
 	nav {
 		.flexCenter();
 		margin-bottom: @normal;
@@ -178,6 +192,9 @@ body {
 		a {
 			margin: @small;
 			.a();
+			@media (min-width: 1024px) {
+				font-size: @a + 1vmin;
+			}
 		}
 	}
 	.headerContent {
@@ -188,6 +205,7 @@ body {
 		.flexCenter();
 			img {
 			width: 40%;
+			max-width: 200px;
 			border-radius: 5%;
 			margin-bottom: @small;
 		}
@@ -205,6 +223,12 @@ body {
 	.down {
 		.flexCenter();
 		color: @popColor;
+		@media (min-width: 1024px) {
+			display: none;
+		}
+		@media (pointer: fine) {
+			display: none;
+		}
 	}
 }
 

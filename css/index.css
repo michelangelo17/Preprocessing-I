@@ -156,18 +156,18 @@ a {
 }
 .a {
   text-decoration: none;
-  font-size: 2.25rem;
+  font-size: 1.2rem;
   color: white;
   font-family: 'Arvo', serif;
 }
 .h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
 }
 .h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
@@ -181,7 +181,7 @@ a {
   padding-bottom: 3%;
 }
 .p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
   padding: 0 3%;
@@ -204,6 +204,19 @@ body i {
   background-color: #181A1B;
   height: 100vh;
 }
+@media (pointer: fine) {
+  .about {
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    height: auto;
+  }
+  .about a {
+    font-size: 2.2rem;
+  }
+}
 .about nav {
   display: flex;
   justify-content: center;
@@ -214,9 +227,14 @@ body i {
 .about nav a {
   margin: 3%;
   text-decoration: none;
-  font-size: 2.25rem;
+  font-size: 1.2rem;
   color: white;
   font-family: 'Arvo', serif;
+}
+@media (min-width: 1024px) {
+  .about nav a {
+    font-size: 2.2rem;
+  }
 }
 .about .headerContent {
   height: 80%;
@@ -230,25 +248,26 @@ body i {
 }
 .about .headerImg img {
   width: 40%;
+  max-width: 200px;
   border-radius: 5%;
   margin-bottom: 3%;
 }
 .about h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   margin-bottom: 3%;
 }
 .about h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
   padding: 0 0 10%;
 }
 .about p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
   padding: 0 3%;
@@ -260,11 +279,21 @@ body i {
   justify-content: center;
   color: white;
 }
+@media (min-width: 1024px) {
+  .about .down {
+    display: none;
+  }
+}
+@media (pointer: fine) {
+  .about .down {
+    display: none;
+  }
+}
 main {
   background-color: #181A1B;
 }
 main h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   text-align: center;
   font-family: 'Arvo', serif;
@@ -278,7 +307,7 @@ main h3 {
   padding-bottom: 3%;
 }
 main p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Playfair Display', serif;
   padding: 0 3%;
@@ -297,7 +326,7 @@ main #skills .skillsColumn {
   width: 49%;
 }
 main #skills .skillsColumn ul {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: lightgrey;
   font-family: 'Cormorant Garamond', serif;
   text-align: center;
@@ -335,6 +364,6 @@ main #contact .contactLinks a {
 footer {
   margin: 5% 0;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 3rem;
   color: white;
 }
