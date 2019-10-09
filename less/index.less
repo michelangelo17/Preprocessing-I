@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -52,8 +52,225 @@ table {
 * {
     box-sizing: border-box;
 }
+// default settings
 
 html, body {
     height: 100%;
 }
+a {
+	text-decoration: none;
+}
 
+// variables
+
+// padding/marign
+@normal: 5%;
+@extra: 10%;
+@small: 3%;
+
+// font size
+@h1: 4rem;
+@h2: @h1 - 1rem;
+@h3: @h2 - 1rem;
+@a: @h2 - .75rem;
+@p: @h3 - .5rem;
+@li: @h2 - 1rem;
+@copy: @p - 1rem;
+
+// font family
+@mainFont: 'Playfair Display', serif;
+@popFont: 'Arvo', serif;
+@smallFont: 'Cormorant Garamond', serif;
+
+// colors
+
+// font
+@mainColor: lightgrey;
+@popColor: white;
+// background
+@background: #181A1B;
+@popBackground: #41545B;
+
+// mixins
+
+.flexCenter {
+	display: flex;
+	justify-content: center;
+}
+
+.flexColumnCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.flexBetween {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexAround {
+	display: flex;
+	justify-content: space-around;
+}
+
+.a {
+	text-decoration: none;
+	font-size: @a;
+	color: @popColor;
+	font-family: @popFont;
+}
+
+.h1 {
+	font-size: @h1;
+	color: @popColor;
+	text-align: center;
+	font-family: @popFont;
+}
+
+.h2 {
+	font-size: @h2;
+	color: @popColor;
+	text-align: center;
+	font-family: @popFont;
+	padding: 0 0 @extra;
+}
+
+.h3 {
+	font-size: @h3;
+	color: @mainColor;
+	text-align: center;
+	font-family: @popFont;
+	padding-bottom: @small;
+}
+
+.p {
+	font-size: @p;
+	color: @mainColor;
+	font-family: @mainFont;
+	padding: 0 @small;
+	padding-bottom: @normal;
+	text-align: center;
+}
+
+.sectionBorder {
+	padding: @normal 0;
+	border-top: 10px solid @popBackground; 
+}
+
+body {
+	width: 90%;
+	margin: auto;
+	background-color: @popBackground;
+	i {
+		color: @popColor;
+	}
+}
+
+.about {
+	background-color: @background;
+	height: 100vh;
+	nav {
+		.flexCenter();
+		margin-bottom: @normal;
+		max-width: 100%;
+		background-color: @popBackground;
+		a {
+			margin: @small;
+			.a();
+		}
+	}
+	.headerContent {
+		height: 80%;
+		.flexColumnCenter();
+		}
+	.headerImg {
+		.flexCenter();
+			img {
+			width: 40%;
+			border-radius: 5%;
+			margin-bottom: @small;
+		}
+	}
+	h1 {
+		.h1();
+		margin-bottom: @small;
+	}
+	h2 {
+		.h2();
+	}
+	p {
+		.p();
+	}
+	.down {
+		.flexCenter();
+		color: @popColor;
+	}
+}
+
+main {
+	background-color: @background;
+	h2 {
+		.h2();
+	}
+	h3 {
+		.h3();
+	}
+	p {
+		.p();
+	}
+	#skills {
+		.skillsBorder {
+			.sectionBorder();
+		}
+		.skillsContainer {
+			.flexBetween();
+		}
+		.skillsColumn {
+			width: 49%;
+			ul {
+				font-size: @li;
+				color: @mainColor;
+				font-family: @smallFont;
+				text-align: center;
+			}
+		}
+	}
+	#workHistory {
+		.workBorder {
+			.sectionBorder();
+		}
+		p {
+			font-family: @smallFont;
+		}
+		.job {
+			padding: @normal 0;
+			border-bottom: 1px dashed @mainColor; 
+		}
+		.lastJob {
+			border: none;
+		}
+	}
+	#contact {
+		.contactBorder {
+			.sectionBorder();
+		}
+		.github {
+			.flexCenter();
+			padding-bottom: @normal;
+		}
+		.contactLinks {
+			.flexCenter();
+			a {
+				margin: 0 @normal @extra;
+			}
+		}
+	}
+}
+
+footer {
+	margin: @normal 0;
+	text-align: center;
+	font-size: @copy;
+	color: @popColor;
+}

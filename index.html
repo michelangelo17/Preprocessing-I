@@ -7,13 +7,107 @@
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Cormorant+Garamond|Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/37732951b9.js" crossorigin="anonymous"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <header class="about">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#workHistory">History</a>
+      <a href="#contact">Contact</a>
+      <a href="https://michelangelo17.github.io/portfolio-website/">Portfolio</a>
+    </nav>
+    <div class="headerContent">
+      <div class="headerImg">
+        <img src="images/selfie.jpg" alt="A picture of Me"> 
+      </div>
+      <div class="headerText">
+        <h1 class="title">Michelangelo Markus</h1>
+        <h2 class="title">Software Developer</h2>
+        <p>Currently a student at Lambda School in their Fullstack Web Development programme, I am learning a wide array of skills to pair with my prior experience both in and out of the tech industry.</p>
+      </div>
+    </div>
+    <div class="down">
+        <a href="#skills"><i class="fa fa-chevron-down fa-5x" aria-hidden="true"></i></a>
+    </div>
+  </header>
+  <main>
+    <section id="skills">
+      <div class="skillsBorder">
+        <h2>My Skills (In Progress)</h2>
+        <div class="skillsContainer">
+          <div class="skillsColumn">
+            <h3>Languages</h3>
+            <ul>
+              <li>Javascript</li>
+              <li>Java</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SQL</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skillsColumn">
+            <h3>Tools</h3>
+            <ul>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>LESS</li>
+              <li>Spring</li>
+              <li>Express</li>
+              <li>Blockchain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="workHistory">
+      <div class="workBorder">
+        <h2>Work History</h2>
+        <div class="job">
+          <h3>ICT Teacher</h3>
+          <p>ICS International School</p>
+          <p>Phnom Penh, Cambodia</p>
+          <p>2017-2019</p>
+        </div>
+        <div class="job">
+          <h3>Technician</h3>
+          <p>HP Inc.</p>
+          <p>Albuquerque, NM</p>
+          <p>2016</p>
+        </div>
+        <div class="job lastJob">
+          <h3>Wireless Consultant</h3>
+          <p>GoWireless</p>
+          <p>Albuquerque, NM & Portland, OR</p>
+          <p>2011-2015</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contactBorder">
+        <h2>Contact Me</h2>
+        <p>Want to see my code?</p>
+        <div class="github">
+          <a href="https://github.com/michelangelo17"><i class="fab fa-github fa-5x"></i></a>
+        </div>
+        <p>Send me an email, a message on Facebook Messenger or follow me on twitter!</p>
+        <div class="contactLinks">
+          <a href="mailto:michelangelo.markus"><i class="far fa-envelope fa-5x"></i></a>
+          <a href="https://m.me/michelangelo.markus"><i class="fab fa-facebook-messenger fa-5x"></i></a>
+          <a href="https://twitter.com/devmichelangelo"><i class="fab fa-twitter fa-5x"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; 2019 Michelangelo Markus</small>
+  </footer>
 </body>
 </html>
