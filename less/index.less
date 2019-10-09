@@ -98,22 +98,23 @@ a {
 
 // mixins
 
+// flex row centered
 .flexCenter {
 	display: flex;
 	justify-content: center;
 }
-
+// flex column centered
 .flexColumnCenter {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-
+// flex row space between
 .flexBetween {
 	display: flex;
 	justify-content: space-between;
 }
-
+// default a tag styles
 .a {
 	text-decoration: none;
 	font-size: @a;
@@ -123,7 +124,7 @@ a {
 		font-size: @a + 1vw;
 	}
 }
-
+// default h1 tag styles
 .h1 {
 	font-size: @h1;
 	color: @popColor;
@@ -133,7 +134,7 @@ a {
 		font-size: @h1 + 1vw;
 	}
 }
-
+// default h2 tag styles
 .h2 {
 	font-size: @h2;
 	color: @popColor;
@@ -148,7 +149,7 @@ a {
 		padding-bottom: @normal;
 	}
 }
-
+// default h3 tag styles
 .h3 {
 	font-size: @h3;
 	color: @mainColor;
@@ -159,7 +160,7 @@ a {
 		font-size: @h3 + 1vw;
 	}
 }
-
+// default p tag styles
 .p {
 	font-size: @p;
 	color: @mainColor;
@@ -171,7 +172,7 @@ a {
 		font-size: @p + 1vw;
 	}
 }
-
+// section border mixin
 .sectionBorder {
 	padding: @normal 0;
 	border-top: 10px solid @popBackground; 
