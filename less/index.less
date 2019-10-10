@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -52,8 +52,264 @@ table {
 * {
     box-sizing: border-box;
 }
+// default settings
 
 html, body {
     height: 100%;
 }
+a {
+	text-decoration: none;
+}
 
+// variables
+
+// padding/marign
+@normal: 5%;
+@extra: 10%;
+@small: 3%;
+
+// font size
+@h1: 3.5rem;
+@h2: @h1 - 1rem + 1vmin;
+@h3: @h1 - 1.5rem + 1vmin;
+@p: @h1 - 2rem + 1vmin;
+@a: @h1 - 2.5 + 1vmin;
+@li: @h1 - 2rem + 1vmin;
+@copy: @p - 1rem;
+
+
+// font family
+@mainFont: 'Playfair Display', serif;
+@popFont: 'Arvo', serif;
+@smallFont: 'Cormorant Garamond', serif;
+
+// colors
+
+// font
+@mainColor: lightgrey;
+@popColor: white;
+// background
+@background: #181A1B;
+@popBackground: #41545B;
+
+// end variables
+
+
+
+// mixins
+
+// flex row centered
+.flexCenter() {
+	display: flex;
+	justify-content: center;
+}
+// flex column centered
+.flexColumnCenter() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+// flex row space between
+.flexBetween() {
+	display: flex;
+	justify-content: space-between;
+}
+// default a tag styles
+.a() {
+	text-decoration: none;
+	font-size: @a;
+	color: @popColor;
+	font-family: @popFont;
+	@media (min-width: 2000px) {
+		font-size: @a + 1vw;
+	}
+}
+// default h1 tag styles
+.h1() {
+	font-size: @h1;
+	color: @popColor;
+	text-align: center;
+	font-family: @popFont;
+	@media (min-width: 2000px) {
+		font-size: @h1 + 1vw;
+	}
+}
+// default h2 tag styles
+.h2() {
+	font-size: @h2;
+	color: @popColor;
+	text-align: center;
+	font-family: @popFont;
+	padding: 0 0 @extra;
+	@media (min-width: 768px) {
+		padding-bottom: @normal;
+	}
+	@media (min-width: 2000px) {
+		font-size: @h2 + 1vw;
+		padding-bottom: @normal;
+	}
+}
+// default h3 tag styles
+.h3() {
+	font-size: @h3;
+	color: @mainColor;
+	text-align: center;
+	font-family: @popFont;
+	padding-bottom: @small;
+	@media (min-width: 2000px) {
+		font-size: @h3 + 1vw;
+	}
+}
+// default p tag styles
+.p() {
+	font-size: @p;
+	color: @mainColor;
+	font-family: @mainFont;
+	padding: 0 @small;
+	padding-bottom: @normal;
+	text-align: center;
+	@media (min-width: 2000px) {
+		font-size: @p + 1vw;
+	}
+}
+// section border mixin
+.sectionBorder() {
+	padding: @normal 0;
+	border-top: 10px solid @popBackground; 
+}
+
+// end mixins
+
+
+
+// styles start
+
+body {
+	//body styles
+	width: 90%;
+	margin: auto;
+	background-color: @popBackground;
+
+	//body html tag selectors
+	nav {
+		.flexCenter();
+		margin-bottom: @normal;
+		max-width: 100%;
+		background-color: @popBackground;
+		a {
+			margin: @small;
+			.a();
+		}
+	}
+	h1 {
+		.h1();
+		margin-bottom: @small;
+	}
+	h2 {
+		.h2();
+	}
+	p {
+		.p();
+	}
+
+	// class and id selectors
+
+	// header styles
+	.about {
+		background-color: @background;
+		.headerContent {
+			height: 80%;
+			.flexColumnCenter();
+			}
+		.headerImg {
+			.flexCenter();
+				img {
+				width: 40%;
+				max-width: 200px;
+				border-radius: 5%;
+				margin-bottom: @small;
+			}
+		}
+	}
+
+	// main styles
+	main {
+		background-color: @background;
+
+		//main html tag selectors
+		h2 {
+			.h2();
+		}
+		h3 {
+			.h3();
+		}
+		p {
+			.p();
+		}
+		ul {
+			font-size: @li;
+			color: @mainColor;
+			font-family: @smallFont;
+			text-align: center;
+			@media (min-width: 2000px) {
+				font-size: @li + 1vw;
+			}
+		}
+		i {
+			color: @popColor;
+		}
+
+		//class and id selectors
+		#skills {
+			.skillsBorder {
+				.sectionBorder();
+			}
+			.skillsContainer {
+				.flexBetween();
+			}
+			.skillsColumn {
+				width: 49%;
+			}
+		}
+
+		#workHistory {
+			.workBorder {
+				.sectionBorder();
+			}
+			p {
+				font-family: @smallFont;
+			}
+			.job {
+				padding: @normal 0;
+				border-bottom: 1px dashed @mainColor; 
+			}
+			.lastJob {
+				border: none;
+			}
+		}
+
+		#contact {
+			.contactBorder {
+				.sectionBorder();
+			}
+			.github {
+				.flexCenter();
+				padding-bottom: @normal;
+			}
+			.contactLinks {
+				.flexCenter();
+				a {
+					margin: 0 @normal @extra;
+				}
+			}
+		}
+	}
+	
+	// footer styles
+	footer {
+		margin: @normal 0;
+		text-align: center;
+		font-size: @copy;
+		color: @popColor;
+	}
+}

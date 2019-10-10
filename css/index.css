@@ -1,1 +1,332 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 90%;
+  margin: auto;
+  background-color: #41545B;
+}
+body nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  max-width: 100%;
+  background-color: #41545B;
+}
+body nav a {
+  margin: 3%;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Arvo', serif;
+}
+@media (min-width: 2000px) {
+  body nav a {
+    font-size: 3rem;
+  }
+}
+body h1 {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  margin-bottom: 3%;
+}
+@media (min-width: 2000px) {
+  body h1 {
+    font-size: 4.5rem;
+  }
+}
+body h2 {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  padding: 0 0 10%;
+}
+@media (min-width: 768px) {
+  body h2 {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 2000px) {
+  body h2 {
+    font-size: 4.5rem;
+    padding-bottom: 5%;
+  }
+}
+body p {
+  font-size: 2.5rem;
+  color: lightgrey;
+  font-family: 'Playfair Display', serif;
+  padding: 0 3%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+@media (min-width: 2000px) {
+  body p {
+    font-size: 3.5rem;
+  }
+}
+body .about {
+  background-color: #181A1B;
+}
+body .about .headerContent {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .about .headerImg {
+  display: flex;
+  justify-content: center;
+}
+body .about .headerImg img {
+  width: 40%;
+  max-width: 200px;
+  border-radius: 5%;
+  margin-bottom: 3%;
+}
+body main {
+  background-color: #181A1B;
+}
+body main h2 {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  padding: 0 0 10%;
+}
+@media (min-width: 768px) {
+  body main h2 {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 2000px) {
+  body main h2 {
+    font-size: 4.5rem;
+    padding-bottom: 5%;
+  }
+}
+body main h3 {
+  font-size: 3rem;
+  color: lightgrey;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  padding-bottom: 3%;
+}
+@media (min-width: 2000px) {
+  body main h3 {
+    font-size: 4rem;
+  }
+}
+body main p {
+  font-size: 2.5rem;
+  color: lightgrey;
+  font-family: 'Playfair Display', serif;
+  padding: 0 3%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+@media (min-width: 2000px) {
+  body main p {
+    font-size: 3.5rem;
+  }
+}
+body main ul {
+  font-size: 2.5rem;
+  color: lightgrey;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+@media (min-width: 2000px) {
+  body main ul {
+    font-size: 3.5rem;
+  }
+}
+body main i {
+  color: white;
+}
+body main #skills .skillsBorder {
+  padding: 5% 0;
+  border-top: 10px solid #41545B;
+}
+body main #skills .skillsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+body main #skills .skillsColumn {
+  width: 49%;
+}
+body main #workHistory .workBorder {
+  padding: 5% 0;
+  border-top: 10px solid #41545B;
+}
+body main #workHistory p {
+  font-family: 'Cormorant Garamond', serif;
+}
+body main #workHistory .job {
+  padding: 5% 0;
+  border-bottom: 1px dashed lightgrey;
+}
+body main #workHistory .lastJob {
+  border: none;
+}
+body main #contact .contactBorder {
+  padding: 5% 0;
+  border-top: 10px solid #41545B;
+}
+body main #contact .github {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+body main #contact .contactLinks {
+  display: flex;
+  justify-content: center;
+}
+body main #contact .contactLinks a {
+  margin: 0 5% 10%;
+}
+body footer {
+  margin: 5% 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
